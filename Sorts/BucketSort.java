@@ -8,7 +8,7 @@ import java.util.Random;
 /** Wikipedia: https://en.wikipedia.org/wiki/Bucket_sort */
 public class BucketSort {
   public static void main(String[] args) {
-    int[] arr = new int[10];
+    int[] arr = new int[10000];
 
     /* generate 10 random numbers from -50 to 49 */
     Random random = new Random();
@@ -17,7 +17,6 @@ public class BucketSort {
     }
 
     bucketSort(arr);
-
     /* check array is sorted or not */
     for (int i = 0, limit = arr.length - 1; i < limit; ++i) {
       assert arr[i] <= arr[i + 1];
@@ -37,7 +36,7 @@ public class BucketSort {
     int min = min(arr);
 
     /* number of buckets */
-    int numberOfBuckets = max - min + 1;
+    int numberOfBuckets = (int) (Math.sqrt(max - min) + 1);
 
     List<List<Integer>> buckets = new ArrayList<>(numberOfBuckets);
 
