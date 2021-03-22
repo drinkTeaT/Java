@@ -161,7 +161,7 @@ class CountingSort implements SortAlgorithm {
         print(streamSort(unsortedInts));
 
         System.out.println("\n------------------------------\n");
-        for (int i : CountingSort.countSort(CountingSort.originCountSort(new int[]{4, 23, 6, 78, 1, 54, 23, 1, 9, 231, 9, 12}))) {
+        for (int i : CountingSort.countSort(new int[]{4, 23, 6, 78, 1, 54, 23, 1, 9, 231, 9, 12})) {
             System.out.print(i + " ");
         }
         System.out.println("\n------------------------------\n");
