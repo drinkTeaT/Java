@@ -19,15 +19,15 @@ class RadixSort {
         int i;
         int[] count = new int[10];
         Arrays.fill(count, 0);
-
+        // count[个位] = 次数
         for (i = 0; i < n; i++) {
             count[(arr[i] / exp) % 10]++;
         }
-
+        // 表示前面还有几位数，优化后的计数排序
         for (i = 1; i < 10; i++) {
             count[i] += count[i - 1];
         }
-
+        // 从后往前
         for (i = n - 1; i >= 0; i--) {
             output[count[(arr[i] / exp) % 10] - 1] = arr[i];
             count[(arr[i] / exp) % 10]--;
@@ -42,6 +42,7 @@ class RadixSort {
 
         int m = getMax(arr, n);
 
+        // 比较个位 十位 百位进行比较
         for (int exp = 1; m / exp > 0; exp *= 10) {
             countSort(arr, n, exp);
         }
