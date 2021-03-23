@@ -117,7 +117,7 @@ class CountingSort implements SortAlgorithm {
         System.out.println("count array len：" + k);
 
         int c[] = new int[k];
-        //先是count计数词频
+        //先是count[数字] = 次数
         for (int i = 0; i < a.length; ++i) {
             c[a[i] - min]++;
         }

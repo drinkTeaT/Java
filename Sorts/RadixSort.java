@@ -19,16 +19,17 @@ class RadixSort {
         int i;
         int[] count = new int[10];
         Arrays.fill(count, 0);
-        // count[个位] = 次数
+        // count[arr[i]的个位] = 次数
         for (i = 0; i < n; i++) {
             count[(arr[i] / exp) % 10]++;
         }
-        // 表示前面还有几位数，优化后的计数排序
+        // 次数转下标。表示前面还有几个数，或者是下标地址。类似优化后的计数排序
         for (i = 1; i < 10; i++) {
             count[i] += count[i - 1];
         }
         // 从后往前
         for (i = n - 1; i >= 0; i--) {
+            // arr[i]的下标
             output[count[(arr[i] / exp) % 10] - 1] = arr[i];
             count[(arr[i] / exp) % 10]--;
         }
