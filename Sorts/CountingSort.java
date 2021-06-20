@@ -144,6 +144,37 @@ class CountingSort implements SortAlgorithm {
         return b;
     }
 
+    /**
+     * real count sort
+     * @param list
+     */
+    public static void countSort(List<Integer> list) {
+        // 计算桶数量
+        int min = Collections.min(list);
+        int max = Collections.max(list);
+        int num = max - min + 1;
+        int[] bucket = new int[num];
+        // 计算出现次数
+        for (int i : list) {
+            bucket[i - min] += 1;
+        }
+        // 计算位置
+        for (int i = 1; i < num; i++) {
+            bucket[i] += bucket[i - 1];
+        }
+        // 返回结果
+        int[] result = new int[list.size()];
+        for (int i : list) {
+            int pos = i - min;
+            int resPos = bucket[pos]-1;
+            result[resPos] = i;
+            bucket[pos] -= 1;
+        }
+        for (int i : result) {
+            System.out.println(i);
+        }
+    }
+
     // Driver Program
     public static void main(String[] args) {
         // Integer Input
