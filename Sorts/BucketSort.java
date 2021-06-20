@@ -36,7 +36,7 @@ public class BucketSort {
     int min = min(arr);
 
     /* number of buckets */
-    int numberOfBuckets = (int) (Math.sqrt(max - min) + 1);
+    int numberOfBuckets =  max - min + 1; // (int) (Math.sqrt(max - min) + 1);//  max - min + 1;
 
     List<List<Integer>> buckets = new ArrayList<>(numberOfBuckets);
 
