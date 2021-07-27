@@ -10,7 +10,7 @@ package ProjectEuler;
  */
 public class Problem07 {
   public static void main(String[] args) {
-    int[][] testNumbers = {
+    int[][] testnumbers = {
       {1, 2},
       {2, 3},
       {3, 5},
@@ -21,7 +21,7 @@ public class Problem07 {
       {50, 229},
       {100, 541}
     };
-    for (int[] number : testNumbers) {
+    for (int[] number : testnumbers) {
       assert solution1(number[0]) == number[1];
     }
   }

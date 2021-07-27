@@ -37,12 +37,12 @@ public class VampireNumber {
     System.out.println(res);
   }
 
-  static boolean isVampireNumber(int a, int b, boolean noPseudoVamireNumbers) {
+  static boolean isVampireNumber(int a, int b, boolean noPseudoVamirenumbers) {
 
-    // this is for pseudoVampireNumbers  pseudovampire number need not be of length n/2 digits for
+    // this is for pseudoVampirenumbers  pseudovampire number need not be of length n/2 digits for
     // example
     // 126 = 6 x 21
-    if (noPseudoVamireNumbers) {
+    if (noPseudoVamirenumbers) {
       if (a * 10 <= b || b * 10 <= a) {
         return false;
       }

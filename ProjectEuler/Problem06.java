@@ -11,14 +11,14 @@ package ProjectEuler;
  */
 public class Problem06 {
   public static void main(String[] args) {
-    int[][] testNumbers = {
+    int[][] testnumbers = {
       {10, 2640},
       {15, 13160},
       {20, 41230},
       {50, 1582700}
     };
 
-    for (int[] testNumber : testNumbers) {
+    for (int[] testNumber : testnumbers) {
       assert solution1(testNumber[0]) == testNumber[1]
           && solutions2(testNumber[0]) == testNumber[1];
     }

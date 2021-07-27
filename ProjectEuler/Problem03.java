@@ -47,14 +47,14 @@ public class Problem03 {
   }
 
   public static void main(String[] args) {
-    int[][] testNumbers = {
+    int[][] testnumbers = {
       {87, 29},
       {10, 5},
       {21, 7},
       {657, 73},
       {777, 37}
     };
-    for (int[] num : testNumbers) {
+    for (int[] num : testnumbers) {
       assert Problem03.maxPrimeFactor(num[0]) == num[1];
     }
     assert Problem03.maxPrimeFactor(600851475143L) == 6857;

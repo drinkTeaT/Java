@@ -57,10 +57,10 @@ public class AmicableNumber {
   }
 
   /**
-   * Check if {@code numberOne and numberTwo } are AmicableNumbers or not
+   * Check if {@code numberOne and numberTwo } are Amicablenumbers or not
    *
    * @param numberOne numberTwo
-   * @return {@code true} if {@code numberOne numberTwo} isAmicableNumbers otherwise false
+   * @return {@code true} if {@code numberOne numberTwo} isAmicablenumbers otherwise false
    */
   static boolean isAmicableNumber(int numberOne, int numberTwo) {
 

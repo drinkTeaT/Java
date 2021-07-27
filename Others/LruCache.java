@@ -22,6 +22,12 @@ public class LruCache {
         tail = head;
     }
 
+    /**
+     * key存在，node与链表头交换，返回node.value
+     * key不存在，返回-1
+     * @param key
+     * @return
+     */
     public int get(int key) {
         if (!map.containsKey(key)) {
             return -1;
@@ -41,6 +47,13 @@ public class LruCache {
         return cur.val;
     }
 
+    /**
+     * key存在，node重新赋值，node与head交换
+     * key不存在，数据量大于size，移除tail节点，tail重新赋值，new node，
+     * key不存在，数据量大于size，new node，
+     * @param key
+     * @param value
+     */
     public void put(int key, int value) {
         if (get(key) != -1) {
             map.get(key).next.val = value;

@@ -2,7 +2,7 @@ package Conversions;
 
 import java.util.Scanner;
 
-/** This class converts Decimal numbers to Octal Numbers */
+/** This class converts Decimal numbers to Octal numbers */
 public class DecimalToOctal {
   /**
    * Main Method

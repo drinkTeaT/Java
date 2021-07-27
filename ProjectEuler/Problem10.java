@@ -9,7 +9,7 @@ package ProjectEuler;
  */
 public class Problem10 {
   public static void main(String[] args) {
-    long[][] testNumbers = {
+    long[][] testnumbers = {
       {2000000, 142913828922L},
       {10000, 5736396},
       {5000, 1548136},
@@ -18,7 +18,7 @@ public class Problem10 {
       {7, 10}
     };
 
-    for (long[] testNumber : testNumbers) {
+    for (long[] testNumber : testnumbers) {
       assert solution1(testNumber[0]) == testNumber[1];
     }
   }
