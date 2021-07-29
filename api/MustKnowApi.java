@@ -1,5 +1,7 @@
 package api;
 
+
+import java.util.*;
 import java.util.Collections;
 
 /**
@@ -11,6 +13,7 @@ public class MustKnowApi {
     public static void main(String[] args) {
         SortApi.sort();
         MathApi.math();
+        SubListApi.sub();
     }
 }
 
@@ -54,5 +57,20 @@ class MathApi {
         // 开2次方根 要记得加上d哦
         double gen = Math.pow(8, 1d / 3d);
         System.out.println(gen);
+    }
+}
+
+/**
+ * 截断API
+ */
+class SubListApi {
+    public static void sub() {
+        List<Integer> list = Arrays.asList(27, 59, 8, 72, 19, 8758, 1, 29);
+        // 左闭右开
+        List<Integer> sub = list.subList(0, 2);
+        System.out.println(sub);
+        // sub里的值改变会影响list里的值
+        sub.set(0, 3);
+        System.out.println(list);
     }
 }
